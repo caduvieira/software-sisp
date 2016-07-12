@@ -23,12 +23,31 @@
   <body>
     <div class="container-fluid">
 
-      <h2>CSV to HTML Table</h2>
+      <h1>Catálogo de software do SISP</h1>
 
-      <p>Display any CSV file as a searchable, filterable, pretty HTML table. Done in 100% JavaScript. <a href='https://github.com/derekeder/csv-to-html-table'>Code on GitHub</a>.</p>
+<p>O objetivo do Catálogo de Software do SISP é centralizar as informações das diversas soluções informatizadas utilizadas pelo setor público. Com essas informações é possível monitorar os recursos despendidos na compra ou desenvolvimento destas soluções.
+A criação deste instrumento público vem para auxiliar os órgãos integrantes do SISP na busca de soluções em consonância com o que está determinado na Instrução Normativa SLTI nº 04 de 11 de setembro de 2014, que na fase do Estudo Técnico Preliminar prevê no Art 12:</p>
 
-      <p>Here's a table of Health Clinics from the <a href='https://data.cityofchicago.org/browse?q=health%20clinic&sortBy=relevance&utf8=%E2%9C%93'>City of Chicago Data Portal</a>.</p>
-      
+<p><ul><li>Item I -  c) análise de projetos similares realizados por outros órgãos ou entidades da Administração Pública.</li>
+<li>Item II - a) disponibilidade de solução similar em outro órgão ou entidade da Administração Pública;</li></ul></p>
+
+<p>É muito importante a participação de todos os órgãos do governo no preenchimento e atualização destas informações. Com estas informações a Secretaria de Tecnologia de Informação (STI) do Ministério do Planejamento promoverá ações visando o compartilhamento de software que refletirá na economia de recursos e melhoria na qualidade dos sistemas utilizados na administração pública.</p>
+
+
+<p><a href="http://sisp.gov.br/catalogosisp/wiki/Apresentacao">Já está disponível a planilha com os dados consolidados - Catálogo de Software do SISP. Faça o download no SISP</a></p>
+
+<p><a href="http://sisp.gov.br/catalogosisp/wiki/Apresentacao">A planilha de referência para preenchimento está disponível para download no SISP</a></p>
+
+<p>ATENÇÃO: A planilha está no formato .ods, para preenchimento utilize o Libre Office (https://www.libreoffice.org/)
+ Após o preenchimento, por favor encaminhe a planilha para o e-mail: sisp@planejamento.gov.br</p>  
+
+<p>Se tiver dúvidas sobre os campos da planilha, acesse a página de Orientações.</p>
+
+<p>Outras dúvidas podem ser encaminhadas para a central de suporte do SISP: http://c3s.sisp.gov.br</p> 
+   
+<hr>
+<h2> Dados dos softwares:</h2>
+   
       <div id='table-container'></div>
 
     </div><!-- /.container -->
@@ -52,11 +71,12 @@
 
     <script>
       init_table({
-        csv_path: 'data/Health Clinics in Chicago.csv', 
+        csv_path: 'data/CatalogodeSoftwareSISP.csv', 
         element: 'table-container', 
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
-        datatables_options: {"paging": false}
+        datatables_options: {"displayStart": 0,
+									  "paging": true}
       });
     </script>
   </body>
